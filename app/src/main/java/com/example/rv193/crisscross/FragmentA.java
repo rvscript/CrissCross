@@ -33,7 +33,7 @@ public class FragmentA extends Fragment {
             @Override
             public void onClick(View v) {
                 String s = editText.getText().toString();
-
+                String f = "a string to test pull request with git can be deleted";
                 sendTextCommunication stc = (sendTextCommunication)getActivity();
                 stc.setTheText(s);
             }

@@ -9,7 +9,10 @@ public class MainActivity extends AppCompatActivity implements
         FragmentA.sendTextCommunication, FragmentB.SendTextCommunication2 {
     FragmentA fragment1;
     FragmentB fragment2;
-
+    //App that shows communication between fragments using an interface and implementing it in
+    // the mainActivity
+    // CrissCross is a simple and effective example of passing information from fragment to
+    // activity to fragment
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
