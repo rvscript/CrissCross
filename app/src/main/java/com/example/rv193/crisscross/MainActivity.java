@@ -1,9 +1,12 @@
 package com.example.rv193.crisscross;
 
+import android.content.Context;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity implements
         FragmentA.sendTextCommunication, FragmentB.SendTextCommunication2 {
@@ -41,13 +44,20 @@ public class MainActivity extends AppCompatActivity implements
     //Criss Cross Fragment text A to Fragment text B
     @Override
     public void setTheText(String s) {
-
+        SharedPreferences sp= getSharedPreferences("MyData", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp.edit();
+        editor.putString("string1", s);
+        editor.commit();
+        Toast.makeText(this,"string1 saved", Toast.LENGTH_SHORT).show();
         fragment2.textView2.setText(s);
     }
 
     @Override
     public void setTheText2(String s) {
-
+        SharedPreferences sp2 = getSharedPreferences("MyData", Context.MODE_PRIVATE);
+        SharedPreferences.Editor editor = sp2.edit();
+        editor.commit();
+        Toast.makeText(this, "string2 is saved", Toast.LENGTH_SHORT).show();
         fragment1.textView.setText(s);
     }
 }

@@ -15,7 +15,7 @@
             android:id="@+id/textview2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="@string/hello_blank_fragment"
+            android:text=""
             android:textSize="18sp" />
 
         <EditText
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="Name" />
+            android:hint="" />
 
         <Button
             android:id="@+id/button2"
